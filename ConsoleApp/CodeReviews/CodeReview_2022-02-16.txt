@@ -1,0 +1,33 @@
+﻿1. Brak jakiegokolwiek wyjścia danych z DataReadera.
+2. Zmienna prywatna ImportedObjects powinna być z małej litery. 
+3. StreamReader należy użyć w klauzuli using()
+4. new ImportedObject() po co w inicjalizacji listy? (linia 16 oryg.)
+5. for (int i = 0; i <= importedLines.Count; i++) powinno być :
+   for (int i = 0; i <= importedLines.Count - 1; i++)
+6. var values = importedLine.Split(';'); powinno być:
+   var values = importedLine.Split(','); 
+7. IEnumerable<ImportedObject> ImportedObjects powinno być:
+   List<ImportedObject> ImportedObjects
+8. wobec 7. następujące rzutowanie :
+   ((List<ImportedObject>)ImportedObjects).Add(importedObject);
+   jest niepotrzebne:
+   ImportedObjects.Add(importedObject);
+9. Replace(Environment.NewLine, "") w wyciągniętych liniach nie ma już znaków nowej linii! Replace niepotrzebny.
+10. Jeśli (zgodnie z poprawką 7.) ImportedObjects jest już listą, to: ImportedObjects.ToArray()[i]; może przejść na
+    ImportedObjects.[i];
+11. Linia 58 -- szukanie po Type nie zadziała, gdyż w linii 45 mamy .Type.ToUpper() natomiast .ParentType.... nie jest z .ToUpper();
+    Rozw.  -- wywalamy ToUpper().
+12. NumberOfChildren powinno być typem całkowitym (ilość dzieci nie może być ułamkowa)
+13. Składnię: importedObject.NumberOfChildren = 1 + importedObject.NumberOfChildren; można lepiej zapisać jako:
+    importedObject.NumberOfChildren += 1;
+14. Ify z 58 l. i 60 l. dałbym jako jeden if. Ogólnie dla linii 53--66 posłużyłbym się Linq. 
+15. L. 77 i 86 wywalić .ToUpper(); Jeden warunek z warunków z 77 i 79 l. 
+16. 86 i 88 warunki w jeden warunek. 
+17. niepotrzebna klasa bazowa ImportedObjectBaseClass. 
+18. Type przenieść do ImportedObject. 
+
+Jednak skoro czasem ImportedObject jest używany jako baza danych, czasem jako tabela, a czasem jako kolumna, to 
+należy tutaj uporządkować trochę (klasa niech nie posiada pól, których nie używa)
+
+
+
