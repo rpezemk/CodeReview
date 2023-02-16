@@ -26,10 +26,14 @@ namespace DbImporter
 
             foreach (Database db in dbList)
             {
-                db.Tables = tabList.Where(t => t.ParentName == db.Name).ToList();
+                db.Tables = tabList.Where(t => t.ParentName.ToUpper() == db.Name.ToUpper()).ToList();
                 foreach (Table tab in db.Tables)
                 {
-                    tab.Columns = colList.Where(t => t.ParentName == tab.Name && t.Schema == tab.Schema).ToList();
+                    tab.Columns = colList
+                        .Where(t => 
+                        t.ParentName.ToUpper() == tab.Name.ToUpper() 
+                        && t.Schema.ToUpper() == tab.Schema.ToUpper())
+                        .ToList();
                 }
             }
 

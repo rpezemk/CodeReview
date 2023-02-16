@@ -24,15 +24,15 @@ namespace DbImporter.UnitTests
             var col = objs[2];
 
             Assert.IsTrue(db.Type == "DATABASE");
-            Assert.IsTrue(db.Name == "AdventureWorks2016_EXT".ToUpper());
+            Assert.IsTrue(db.Name == "AdventureWorks2016_EXT");
 
             Assert.IsTrue(table.Type == "TABLE");
-            Assert.IsTrue(table.Name == "SalesTaxRate".ToUpper());
-            Assert.IsTrue(table.Schema == "Sales".ToUpper());
+            Assert.IsTrue(table.Name == "SalesTaxRate");
+            Assert.IsTrue(table.Schema == "Sales");
 
             Assert.IsTrue(col.Type == "COLUMN");
-            Assert.IsTrue(col.Name == "ModifiedDate".ToUpper());
-            Assert.IsTrue(col.Schema == "Sales".ToUpper());
+            Assert.IsTrue(col.Name == "ModifiedDate");
+            Assert.IsTrue(col.Schema == "Sales");
             Assert.IsTrue(col.DataType == "datetime".ToUpper());
         }
 

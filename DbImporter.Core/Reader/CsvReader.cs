@@ -51,11 +51,11 @@ namespace DbImporter.Core
             }
 
             var csvLine = new CsvLineModel(); 
-            csvLine.Type = values[0].Trim().ToUpper(); ;
-            csvLine.Name = values[1].Trim().ToUpper(); ;
-            csvLine.Schema = values[2].Trim().ToUpper();
-            csvLine.ParentName = values[3].Trim().ToUpper();
+            csvLine.Type = values[0].Trim().ToUpper();
+            csvLine.Name = values[1].Trim(); ;
+            csvLine.Schema = values[2].Trim();
             csvLine.ParentType = values[4].Trim().ToUpper();
+            csvLine.ParentName = values[3].Trim();
             csvLine.DataType = values[5].ToUpper();
             csvLine.IsNullable = values[6];
 
