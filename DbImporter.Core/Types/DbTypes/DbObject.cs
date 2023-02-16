@@ -1,5 +1,9 @@
 ﻿namespace DbImporter.Core.Types.DbTypes
 {
+
+    /// <summary>
+    /// General db object (abstract)
+    /// </summary>
     public abstract class DbObject
     {
         public string Name { get; set; }

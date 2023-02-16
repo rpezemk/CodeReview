@@ -16,7 +16,8 @@ namespace ConsoleApp
             var path = "..\\..\\data.csv";
             Importer importer = new Importer(path);
             var objects = importer.GetDbObjects();
-            var hierarchy = Hierarchizator.GetHierarchy(objects);
+            var hierarchizator = new Hierarchizator(objects);
+            var hierarchy = hierarchizator.GetHierarchy();
             Console.WriteLine(hierarchy);
         }
     }

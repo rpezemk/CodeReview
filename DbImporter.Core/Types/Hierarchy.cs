@@ -7,6 +7,9 @@ using DbImporter.Core.Types.DbTypes;
 
 namespace DbImporter.Core.Types
 {
+    /// <summary>
+    /// Hierarchy model
+    /// </summary>
     public class Hierarchy
     {
         public List<Database> Databases { get; set; } = new List<Database>();

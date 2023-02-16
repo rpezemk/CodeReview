@@ -7,9 +7,19 @@ using System.Threading.Tasks;
 
 namespace DbImporter.Core
 {
-    public static class Hierarchizator
+
+    /// <summary>
+    /// Static class for hierarchization
+    /// </summary>
+    public class Hierarchizator
     {
-        public static Hierarchy GetHierarchy(List<CsvLineModel> csvLines)
+        List<CsvLineModel> csvLines;
+        public Hierarchizator(List<CsvLineModel> _csvLines)
+        {
+            this.csvLines = _csvLines.ToList();
+        }
+
+        public Hierarchy GetHierarchy()
         {
             Hierarchy hierarchy = new Hierarchy(csvLines.Select(l => l.AsDbObject()).ToList());
             return hierarchy;

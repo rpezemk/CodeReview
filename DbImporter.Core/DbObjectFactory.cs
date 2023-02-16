@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 namespace DbImporter.Core.Types
 {
-
+    /// <summary>
+    /// Object Factory, emits instance of concrete implementation of DbObject. 
+    /// </summary>
     public class DbObjectFactory
     {
         Dictionary<string, Type> _dbObjects = new Dictionary<string, Type>()
@@ -14,6 +16,12 @@ namespace DbImporter.Core.Types
         {"COLUMN", typeof(Column) }
     };
 
+
+        /// <summary>
+        /// emits instance of concrete implementation of DbObject, according to CsvLineModel.Type
+        /// </summary>
+        /// <param name="line"></param>
+        /// <returns></returns>
         public DbObject EmitObject(CsvLineModel line)
         {
             DbObject dbObject = null;

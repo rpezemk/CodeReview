@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace DbImporter.Core.Types.DbTypes
 {
+    /// <summary>
+    /// db Table model. 
+    /// </summary>
     public class Table : DbObject
     {
         public string Schema { get; set; }

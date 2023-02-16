@@ -1,5 +1,8 @@
 ﻿namespace DbImporter.Core.Types
 {
+    /// <summary>
+    /// csv line model
+    /// </summary>
     public class CsvLineModel
     {
         public string Name { get; set; }

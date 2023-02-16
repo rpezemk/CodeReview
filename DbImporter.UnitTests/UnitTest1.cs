@@ -50,7 +50,8 @@ namespace DbImporter.UnitTests
             var stream = Helpers.GenerateStreamFromString(input);
             Importer importer = new Importer(stream);
             var objs = importer.GetDbObjects();
-            var hierarchy = Hierarchizator.GetHierarchy(objs);
+            var hiearchizator = new Hierarchizator(objs);
+            var hierarchy = hiearchizator.GetHierarchy();
             Assert.IsTrue(hierarchy.Databases.Count == 1);
             var db = hierarchy.Databases[0];
             Assert.IsTrue(db.Tables.Count == 1);

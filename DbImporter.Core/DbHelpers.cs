@@ -13,6 +13,19 @@ namespace DbImporter
     /// </summary>
     public static class DbHelpers
     {
+
+        private static DbObjectFactory dbObjectFactory;
+        public static DbObjectFactory DbObjectFactory
+        {
+            get
+            {
+                if (dbObjectFactory == null)
+                    dbObjectFactory = new DbObjectFactory();
+                return dbObjectFactory;
+            }
+        }
+
+
         /// <summary>
         /// Provides List of nested database objects (database <-- table <-- column)
         /// </summary>
@@ -40,16 +53,6 @@ namespace DbImporter
             return dbList;
         }
 
-        private static DbObjectFactory dbObjectFactory;
-        public static DbObjectFactory DbObjectFactory
-        {
-            get
-            {
-                if (dbObjectFactory == null)
-                    dbObjectFactory = new DbObjectFactory();
-                return dbObjectFactory;
-            }
-        }
 
         public static DbObject AsDbObject(this CsvLineModel lineModel) => DbObjectFactory.EmitObject(lineModel);
         

@@ -2,7 +2,9 @@
 
 namespace DbImporter.Core.Types.DbTypes
 {
-
+    /// <summary>
+    /// Column model
+    /// </summary>
     public class Column : DbObject
     {
         public string Schema { get; set; }

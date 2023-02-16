@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace DbImporter.Core
 {
+
+    /// <summary>
+    /// Class for importing data and transferring data to List of CsvLineModel
+    /// </summary>
     public class Importer
     {
         StreamReader streamReader;
@@ -27,6 +31,10 @@ namespace DbImporter.Core
             streamReader = new StreamReader(stream);
         }
 
+        /// <summary>
+        /// So, gimme csvModel list.
+        /// </summary>
+        /// <returns></returns>
         public List<CsvLineModel> GetDbObjects()
         {
             List<CsvLineModel> list = new List<CsvLineModel>();

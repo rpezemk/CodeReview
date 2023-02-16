@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace DbImporter.Core.Types.DbTypes
 {
+    /// <summary>
+    /// Database model
+    /// </summary>
     public class Database : DbObject
     {
         public int NumberOfChildren => Tables.Count;
