@@ -1,4 +1,4 @@
-﻿namespace CsvImporter
+﻿namespace DbImporter.Core.Types.DbTypes
 {
     public abstract class DbObject
     {

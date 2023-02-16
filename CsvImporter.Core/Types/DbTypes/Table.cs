@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CsvImporter
+namespace DbImporter.Core.Types.DbTypes
 {
     public class Table : DbObject
     {

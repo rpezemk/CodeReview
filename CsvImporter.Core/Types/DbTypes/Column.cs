@@ -1,7 +1,8 @@
 ﻿using System.Data.Common;
 
-namespace CsvImporter
+namespace DbImporter.Core.Types.DbTypes
 {
+
     public class Column : DbObject
     {
         public string Schema { get; set; }

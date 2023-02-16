@@ -43,19 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbHelper.cs" />
-    <Compile Include="DbObjectFactory.cs" />
-    <Compile Include="Reader\IDbObjectsReader.cs" />
-    <Compile Include="Types\CsvLine.cs" />
-    <Compile Include="Types\Column.cs" />
-    <Compile Include="Types\Database.cs" />
-    <Compile Include="Reader\DataReader.cs" />
-    <Compile Include="Types\DbObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Types\Hierarchy.cs" />
-    <Compile Include="Types\Table.cs" />
-    <Compile Include="Types\UnimplementedDbType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -64,6 +53,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DbImporter.Core\DbImporter.Core.csproj">
+      <Project>{f80dcf5c-2f1f-43a3-9243-e4b822ad4bc5}</Project>
+      <Name>DbImporter.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

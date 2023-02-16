@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CsvImporter.Types
+namespace DbImporter.Core.Types.DbTypes
 {
     internal class UnimplementedDbType : DbObject
     {

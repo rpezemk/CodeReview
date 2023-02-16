@@ -1,6 +1,6 @@
-﻿namespace ConsoleApp
+﻿namespace CsvImporter
 {
-    public class CsvModel
+    public class CsvLineModel
     {
         public string Name { get; set; }
         public string Type { get; set; }

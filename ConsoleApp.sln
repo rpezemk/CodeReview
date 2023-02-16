@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{D0836625-FD9E-416A-89C4-658E3255B44B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbImporter.Core", "DbImporter.Core\DbImporter.Core.csproj", "{F80DCF5C-2F1F-43A3-9243-E4B822AD4BC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbImporter.UnitTests", "DbImporter.UnitTests\DbImporter.UnitTests.csproj", "{3C3F7581-A52E-472C-AAFE-86BF57C5271B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D0836625-FD9E-416A-89C4-658E3255B44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0836625-FD9E-416A-89C4-658E3255B44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0836625-FD9E-416A-89C4-658E3255B44B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F80DCF5C-2F1F-43A3-9243-E4B822AD4BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80DCF5C-2F1F-43A3-9243-E4B822AD4BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80DCF5C-2F1F-43A3-9243-E4B822AD4BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80DCF5C-2F1F-43A3-9243-E4B822AD4BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C3F7581-A52E-472C-AAFE-86BF57C5271B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C3F7581-A52E-472C-AAFE-86BF57C5271B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C3F7581-A52E-472C-AAFE-86BF57C5271B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C3F7581-A52E-472C-AAFE-86BF57C5271B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

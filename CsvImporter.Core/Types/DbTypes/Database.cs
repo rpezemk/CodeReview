@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CsvImporter
+namespace DbImporter.Core.Types.DbTypes
 {
     public class Database : DbObject
     {
@@ -10,11 +10,11 @@ namespace CsvImporter
         {
             NumberOfChildren = line.NumberOfChildren;
         }
-        public List<Table> Tables { get; set; } = new List<Table> ();
+        public List<Table> Tables { get; set; } = new List<Table>();
         public override string ToString()
         {
             return $"Database '{Name}' ({NumberOfChildren} tables) + " +
-                $"\n{string.Join("\n", Tables.Select(t => t.ToString() ))}" ;
+                $"\n{string.Join("\n", Tables.Select(t => t.ToString()))}";
         }
 
     }

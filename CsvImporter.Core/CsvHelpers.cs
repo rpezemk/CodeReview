@@ -1,15 +1,16 @@
-﻿using System;
+﻿using DbImporter.Core.Types.DbTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace DbImporter
 {
     /// <summary>
     /// helpers for managing relations between objects. 
     /// </summary>
-    public static class CsvHelpers
+    public static class DbHelpers
     {
         /// <summary>
         /// Provides List of nested database objects (database <-- table <-- column)
@@ -25,7 +26,7 @@ namespace ConsoleApp
             foreach (Database db in dbList)
             {
                 db.Tables = tabList.Where(t => t.ParentName == db.Name).ToList();
-                foreach(Table tab in db.Tables)
+                foreach (Table tab in db.Tables)
                 {
                     tab.Columns = colList.Where(t => t.ParentName == tab.Name && t.Schema == tab.Schema).ToList();
                 }
