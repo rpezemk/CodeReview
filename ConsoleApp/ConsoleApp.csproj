@@ -43,9 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataReader.cs" />
+    <Compile Include="DbHelper.cs" />
+    <Compile Include="DbObjectFactory.cs" />
+    <Compile Include="Reader\IDbObjectsReader.cs" />
+    <Compile Include="Types\CsvLine.cs" />
+    <Compile Include="Types\Column.cs" />
+    <Compile Include="Types\Database.cs" />
+    <Compile Include="Reader\DataReader.cs" />
+    <Compile Include="Types\DbObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\Hierarchy.cs" />
+    <Compile Include="Types\Table.cs" />
+    <Compile Include="Types\UnimplementedDbType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

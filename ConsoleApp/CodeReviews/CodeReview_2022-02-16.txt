@@ -26,6 +26,13 @@
 17. niepotrzebna klasa bazowa ImportedObjectBaseClass. 
 18. Type przenieść do ImportedObject. 
 
+
+19. zastanowiłbym się, czy Replace(" ", "") jest potrzebne w czyszczeniu danych. 
+    Spacja może przecież być częścią integralną nazwy kolumny czy tabeli. 
+20. Absolutnie wywaliłbym  Console.ReadLine(); z DataReader. 
+21. Nieużywany przełącznik printData. 
+
+
 Jednak skoro czasem ImportedObject jest używany jako baza danych, czasem jako tabela, a czasem jako kolumna, to 
 należy tutaj uporządkować trochę (klasa niech nie posiada pól, których nie używa)
 
